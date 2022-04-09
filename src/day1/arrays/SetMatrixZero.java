@@ -1,4 +1,4 @@
-package day1;
+package day1.arrays;
 
 //Reference Link: https://takeuforward.org/data-structure/set-matrix-zero/
 //Problem Statement: Given a matrix if an element in the matrix is 0 then you will have to set its entire column and row to 0 and then return the matrix.
