@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Queue;
 
 //Problem 1 - Level order traversal
-public class Problem1 {
+public class SimpleTraversal {
 
     public static List<List<Integer>> traverse(TreeNode root) {
 
@@ -46,7 +46,7 @@ public class Problem1 {
         root.left.left = new TreeNode(9);
         root.right.left = new TreeNode(10);
         root.right.right = new TreeNode(5);
-        List<List<Integer>> output = Problem1.traverse(root);
+        List<List<Integer>> output = SimpleTraversal.traverse(root);
         System.out.println(output);
 
     }

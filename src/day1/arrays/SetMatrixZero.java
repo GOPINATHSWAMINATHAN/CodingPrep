@@ -25,10 +25,22 @@ public class SetMatrixZero {
     //Simple approach
     void setMatrix(int[][] matrix) {
         int rows = matrix.length, cols = matrix[0].length;
+        //2 array  = space complexity issue
         int[] dummy1 = new int[rows];
         int[] dummy2 = new int[cols];
+        //Input: matrix=[[1,1,1],[1,0,1],[1,1,1]]
         Arrays.fill(dummy1, -1);
         Arrays.fill(dummy2, -1);
+
+        //100 MB - google drive, flight ->
+        //1 TB - Flight, googel drive
+        //100 TB - Flight, google drive
+
+        //array - 6 - 1,2,3,4,5,6
+
+       //Big O complexity - > O(N) -> Worst case complexity
+        //Omega - Best case and worst case O(n/2), O(N), O(1)
+        //Theta
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < cols; j++) {
                 if (matrix[i][j] == 0) {
@@ -37,10 +49,20 @@ public class SetMatrixZero {
                 }
             }
         }
+        //{
+        //for(){for(){}-O(N)}-O(N)+
+        //
+        //}
+        //O(N^2)
+
+
+
+        //O(n^2)
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < cols; j++) {
                 if (dummy1[i] == 0 || dummy2[j] == 0) {
                     matrix[i][j] = 0;
+
                 }
             }
         }
@@ -64,6 +86,7 @@ public class SetMatrixZero {
                 if (matrix[i][0] == 0 || matrix[0][j] == 0)
                     matrix[i][j] = 0;
             if (col0 == 0) matrix[i][0] = 0;
+            // Input: matrix=[[1,0,1],[0,0,1],[1,1,1]]
         }
     }
 
